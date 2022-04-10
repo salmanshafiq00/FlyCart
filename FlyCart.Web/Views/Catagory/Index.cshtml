@@ -1,0 +1,36 @@
+﻿@using FlyCart.Entities
+@model List<Catagory>
+@{
+    ViewBag.Title = "Catagory List";
+}
+
+<h2>Catagory List</h2>
+<table class="table table-bordered table-condensed table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Catagory ID</th>
+            <th>Name</th>
+            <th>IsActive</th>
+            <th>IsDelete</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Name</td>
+            <td>@item.IsActive</td>
+            <td>@item.IsDelete</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {item.ID})
+                @Html.ActionLink("Delete", "Delete", new {item.ID})
+
+                @*@Html.Action("Edit","Catagory", new { item.ID })
+                @Html.Action("Delete", "Catagory", new { item.ID })*@
+            </td>
+        </tr>
+    }
+</table>

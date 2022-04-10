@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CatagoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -235,6 +236,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Catagory\Create.cshtml" />
+    <Content Include="Views\Catagory\Index.cshtml" />
+    <Content Include="Views\Catagory\Edit.cshtml" />
+    <Content Include="Views\Catagory\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -251,6 +256,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlyCart.Entities\FlyCart.Entities.csproj">
+      <Project>{116A999A-6855-4BA4-9D20-4F2BE18C1FEB}</Project>
+      <Name>FlyCart.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlyCart.Services\FlyCart.Services.csproj">
+      <Project>{8B253428-0DF9-4289-A0E8-595378B339EE}</Project>
+      <Name>FlyCart.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

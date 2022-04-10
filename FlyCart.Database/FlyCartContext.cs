@@ -9,7 +9,7 @@ using FlyCart.Entities;
 
 namespace FlyCart.Database
 {
-    class FlyCartContext : DbContext
+    public class FlyCartContext : DbContext
     {
         public DbSet<Catagory> Catagories { get; set; }
         public DbSet<Product>  Products { get; set; }

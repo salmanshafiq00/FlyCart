@@ -1,0 +1,19 @@
+﻿@using FlyCart.Entities
+@model Catagory
+@{
+    ViewBag.Title = "Delete Catagory";
+}
+
+<h2>Are you sure you want to delete catagory(@Model.ID) ?</h2>
+@using (Html.BeginForm("Delete", "Catagory", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.HiddenFor(c => c.ID, Model.ID)
+
+    
+    <input type="submit" class="btn btn-danger" name="" value="Delete" />
+}
+<br />
+@Html.ActionLink("Catagory List","Index")
+
+
+

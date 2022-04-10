@@ -1,0 +1,37 @@
+﻿@using FlyCart.Entities
+@model Catagory
+@{
+    ViewBag.Title = "Create Catagory";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm("Create", "Catagory", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.HiddenFor(c => c.ID);
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.Name, new { @class = "col-md-2 control-label" })
+        @Html.TextBoxFor(c => c.Name, new { @class = "col-md-2 form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Description, new { @class = "col-md-2 control-label" })
+        @Html.TextBoxFor(c => c.Description, new { @class = "col-md-2 form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.IsActive, new { @class = "col-md-2 form-check-label" })
+        @Html.RadioButtonFor(c => c.IsActive, "true", new { @class = "col-md-2 form-check-input" })
+        @Html.Label("Yes", new { @class = "col-md-2 form-check-label", @for = "IsActive" })
+        @Html.RadioButtonFor(c => c.IsActive, "false", new { @class = "col-md-2 form-check-input" })
+        @Html.Label("No",  new { @class = "col-md-2 form-check-label", @for = "IsActive" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.IsDelete, new { @class = "col-md-2 form-check-label" })
+        @Html.RadioButtonFor(c => c.IsDelete, "true", new { @class = "col-md-2 form-check-input" })
+        @Html.Label("Yes", new { @class = "col-md-2 form-check-label", @for = "IsDelete" })
+        @Html.RadioButtonFor(c => c.IsDelete, "false", new { @class = "col-md-2 form-check-input" })
+        @Html.Label("No", new { @class = "col-md-2 form-check-label", @for = "IsDelete" })
+    </div>
+
+    <input type="submit" class="btn btn-primary" name="" value="Create" />
+}
